@@ -21,6 +21,9 @@ body {
 .ct_content > .ct_left ul > li {
   width: 100%;
 }
+.ct_content > .ct_left ul > li.active {
+  background-color: #fff;
+}
 .ct_content > .ct_left ul > li > a {
   display: block;
   width: 100%;
@@ -39,9 +42,19 @@ body {
 .ct_content > .ct_right ul {
   border-left: 1px solid #ccc;
 }
+.ct_content > .ct_right ul h3 {
+  text-align: center;
+  color: #ccc;
+  margin: 100px auto;
+}
 .ct_content > .ct_right ul > li > a {
   float: left;
   width: 33.3%;
+  padding: 5px;
+}
+.ct_content > .ct_right ul > li > a > p {
+  text-align: center;
+  width: 100%;
   padding: 5px;
 }
 .ct_content > .ct_right ul > li > a > img {
