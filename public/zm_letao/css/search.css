@@ -1,0 +1,45 @@
+/* 搜索中心搜索模块 */
+.container {
+  padding: 10px;
+}
+/* 具体搜索模块 */
+.topSearch {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #006699;
+  position: relative;
+}
+.topSearch > input {
+  border-radius: 0;
+}
+.topSearch > input:first-of-type {
+  border: none;
+  margin-bottom: 0;
+  height: 28px;
+  width: 100%;
+  font-size: 14px;
+  background: none;
+  color: #666;
+}
+.topSearch > input:last-of-type {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 0;
+  width: 50px;
+  height: 28px;
+  background-color: #006699;
+  color: #fff;
+}
+.search-history {
+  margin: 10px 0 10px 0;
+}
+.search-history > span {
+  font-size: 12px;
+  color: #666;
+}
+.search-history > span:last-of-type:before {
+  font-size: 14px;
+  line-height: normal;
+  padding-right: 5px;
+}
