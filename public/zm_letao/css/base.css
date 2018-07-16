@@ -2,118 +2,91 @@ body {
   background: #FFF;
   font-size: 14px;
 }
-
 img {
   display: block;
 }
-
 a {
   color: #000;
   text-decoration: none;
 }
-
 * {
   margin: 0;
   padding: 0;
 }
-
 ul {
   list-style: none;
 }
-
 img {
   vertical-align: top;
 }
-
 .mui-content {
   background: #FFF;
 }
-
 .footer,
 .header {
   background: #006699;
 }
-
 .header .mui-title {
   color: #FFF;
 }
-
 .header .mui-icon {
   color: #FFF;
 }
-
 .footer .mui-tab-item {
   color: #FFF;
 }
-
 .footer .mui-tab-item.mui-active {
   color: darkorange;
 }
-
 .topCircle {
   bottom: 40px;
 }
-
 /* 导航链接 */
-
 .nav-link {
   width: 100%;
   padding: 0 10px;
 }
-
-.nav-link>a {
+.nav-link > a {
   float: left;
   width: 33.3%;
 }
-
-.nav-link>a>img {
+.nav-link > a > img {
   width: 100%;
 }
-
 /* 品牌产品*/
-
 .brand {
   padding: 10px;
 }
-
-.brand>img {
+.brand > img {
   width: 100%;
 }
-
-.brand ul>li {
+.brand ul > li {
   float: left;
   width: 25%;
   text-align: center;
   padding: 5px 0;
 }
-
-.brand ul>li>a {
+.brand ul > li > a {
   display: block;
   width: 100%;
 }
-
-.brand ul>li>a>img {
+.brand ul > li > a > img {
   width: 100%;
 }
-
 /* 商品部分 */
-
 .product {
   padding: 10px;
 }
-
-.product>img {
+.product > img {
   width: 100%;
   margin: 10px 0;
 }
-
-.product>ul>li {
+.product > ul > li {
   float: left;
   width: 50%;
   padding: 5px;
 }
-
-.product>ul>li>a {
+.product > ul > li > a {
   width: 100%;
   display: block;
   padding: 5px;
@@ -121,29 +94,26 @@ img {
   color: #8f8f94;
   text-align: center;
 }
-
-.product>ul>li>a>img {
+.product > ul > li > a > img {
   width: 100%;
 }
-
-.product>ul>li>a>p {
+.product > ul > li > a > p {
   line-height: 18px;
   padding: 6px 6px 0 6px;
+  overflow: hidden;
+  height: 40px;
 }
-
-.product>ul>li>a>span:nth-of-type(1) {
+.product > ul > li > a > span:nth-of-type(1) {
   display: block;
   color: darkorange;
   text-align: center;
 }
-
-.product>ul>li>a>span:nth-of-type(1)>i {
+.product > ul > li > a > span:nth-of-type(1) > i {
   text-decoration: line-through;
   color: #8f8f94;
   font-style: normal;
 }
-
-.product>ul>li>a>span:nth-of-type(2) {
+.product > ul > li > a > span:nth-of-type(2) {
   background: #006699;
   color: #FFF;
   margin: 8px auto;

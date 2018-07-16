@@ -22,14 +22,16 @@ $(function () {
         /* 定义一个空的数组来接受每次用户输入的localstorage的值 */
         /* 在给数组添加项目的时候要先取出浏览器里面的localstorage数据,并且需要判断数组中是否有跟你当前传入相同的数据,如果有则不需要push */
         if (keyArr.indexOf(keyword) !== -1) {
-            location.href = "search-list.html?keyword =" +keyword
+            keyword = encodeURI(keyword);
+            location.href = "search-result.html?keyword="+keyword;
             return;
         }
         keyArr.push(keyword);
         /* 因为localstorage传参需要传入字符串所以需要转换利用JSON.stringfy() */
         localStorage.setItem('key', JSON.stringify(keyArr))
         getHistory()
-        location.href = "search-list.html?keyword =" +keyword;
+        keyword = encodeURI(keyword);
+        location.href = "search-result.html?keyword="+keyword;
     })
 
     /* 当没有数据显示无数据 */

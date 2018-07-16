@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable = no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘移动项目搜索中心</title>
+    <link rel="stylesheet" href="./assets/mui/css/iconfont.css">
+    <link rel="stylesheet" href="./assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/search-list.css">
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="./assets/mui/js/mui.min.js"></script>
+    <script src="./assets/artTemplate/template-native.js"></script>
+    <script src="./js/search-result.js"></script>
+    <script src="./js/common.js"></script>
+
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav header">
+        <h1 class="mui-title">搜索详情页</h1>
+        <a href="search.html" class="mui-icon mui-icon-search mui-pull-right"></a>
+    </header>
+    <nav class="mui-bar mui-bar-tab footer">
+        <a class="mui-tab-item " href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="cart.html">
+            <span class="mui-icon iconfont icon-gouwuche"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="user.html">
+            <span class="mui-icon mui-icon-person"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+
+    <div class="mui-content" id="refreshContainer">
+        <div>
+            <div class="product">
+                <div class="product-title mui-clearfix">
+                    <span class="mui-pull-left mui-icon mui-icon-arrowdown" id = "priceSort">价格</span>
+                    <span class="mui-pull-right mui-icon mui-icon-arrowdown">销量</span>
+
+                </div>
+                <ul class="mui-clearfix" id="search_result">
+
+
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- 利用模板来渲染搜索到的数据 -->
+    <script type="text/template" id="searchResult">
+        <%for(var i = 0; i < data.length; i++){%>
+            <li>
+                <a href="javascript:;">
+                    <img src="<%=data[i].pic[0].picAddr%>">
+                    <p>
+                        <%=data[i].proName%>
+                    </p>
+                    <span>¥
+                        <%=data[i].price%>
+                            <i>¥
+                                <%=data[i].oldPrice%>
+                            </i>
+                    </span>
+                    <span>立即购买</span>
+                </a>
+            </li>
+            <% } %>
+    </script>
+
+
+</body>
+
+</html>

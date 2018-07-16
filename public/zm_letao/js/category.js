@@ -37,7 +37,6 @@ function getRightData(categoryId){
         dataType: "json",
         success: function (response) {
             var rt_html = template('ct_right',{result:response.rows});
-            console.log({result:response.rows})
             $('.rt_html').html(rt_html);
 
         }

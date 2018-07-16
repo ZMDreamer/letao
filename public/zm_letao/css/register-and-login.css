@@ -1,0 +1,18 @@
+.mui-icon.back-login {
+  color: #ccc;
+}
+.register_content .mui-input-row input {
+  color: #666;
+  font-size: 12px;
+}
+button.submit {
+  padding: 6px 50px;
+}
+.getCode,
+.quick-login {
+  position: absolute;
+  right: 10%;
+  top: 20%;
+  color: #006699;
+  font-size: 12px;
+}
