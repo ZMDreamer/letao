@@ -124,3 +124,10 @@ img {
   border-radius: 5px;
   width: 78px;
 }
+/* 添加收货地址 */
+.add-address {
+  display: block;
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+}

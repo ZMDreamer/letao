@@ -79,21 +79,3 @@ function getData() {
 
 
 
-
-/* 因为我们ajax需要传递一个keyword的id地址给数据库,所以封装一个函数来获取url地址里面的参数*/
-
-function getKeyword(URL, name) {
-    /* 传进来的是一个字符串,所以需要进行转换获取值*/
-    // 1.利用查找?所在的位置来截取
-    var index = URL.indexOf('?') + 1;
-    var targetArr = URL.substr(index).split('&');
-    //3.循环遍历数组中的每一项来跟需要得到的name进行对比
-    for (var i = 0; i < targetArr.length; i++) {
-        // 2.通过'='号来将截取的字符串生成数组
-        var target = targetArr[i].split('=');
-        if (target[0] == name) {
-            return target[1];
-        }
-    }
-    return null;
-}

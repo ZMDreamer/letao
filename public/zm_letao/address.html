@@ -9,18 +9,18 @@
     <link rel="stylesheet" href="./assets/mui/css/iconfont.css">
     <link rel="stylesheet" href="./assets/mui/css/mui.min.css">
     <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/register-and-login.css">
     <script src="./assets/zepto/zepto.min.js"></script>
     <script src="./assets/mui/js/mui.min.js"></script>
+    <script src="./assets/artTemplate/template-native.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/common.js"></script>
-    <script src="./js/login.js"></script>
+    <script src="./js/address.js"></script>
 </head>
 
 <body>
     <header class="mui-bar mui-bar-nav header">
-        <h1 class="mui-title">登录中心</h1>
-        <a href="login.html" class="mui-icon mui-icon-back mui-pull-left back-login"></a>
+        <h1 class="mui-title">收货地址管理</h1>
+        <a href="user.html" class="mui-icon mui-icon-back mui-pull-left back-login"></a>
     </header>
     <nav class="mui-bar mui-bar-tab footer">
         <a class="mui-tab-item " href="index.html">
@@ -35,30 +35,37 @@
             <span class="mui-icon iconfont icon-gouwuche"></span>
             <span class="mui-tab-label">购物车</span>
         </a>
-        <a class="mui-tab-item" href="user.html">
+        <a class="mui-tab-item mui-active" href="user.html">
             <span class="mui-icon mui-icon-person"></span>
             <span class="mui-tab-label">会员中心</span>
         </a>
     </nav>
-    <div class="mui-content register_content">
-        <form class="mui-input-group">
-            <div class="mui-input-row">
-                <label>用户名</label>
-                <input type="text" class="mui-input-clear" placeholder="请输入用户名" name= "username">
-            </div>
-           
-            <div class="mui-input-row">
-                <label>密码</label>
-                <input type="password" class="mui-input-password" placeholder="请输入密码" name = "password"> 
-            </div>
-            
-            <div class="mui-button-row">
-                <button type="button" class="mui-btn mui-btn-primary submit" id = "btn-login">登录</button>
-                <a href="register.html" class = "quick-login">免费注册</a>
-            </div>
-        </form>
-    </div>
+    <div class="mui-content">
+        <a href="add-address.html?isEdit=0" class="add-address">添加收货地址</a>
+        <ul class="mui-table-view" id="user-address">
 
+
+        </ul>
+    </div>
+    <!-- 获取用户已有的地址数据渲染到界面上 -->
+    <script type="text/template" id="addressTpl">
+        <%for(var i = 0; i < result.length;i++){%>
+                <li class="mui-table-view-cell mui-transitioning">
+                    <div class="mui-slider-right mui-disabled">
+                        <span class="mui-btn mui-btn-blue" id ="edit" data-id = "<%=result[i].id%>">编辑</span>
+                        <span class="mui-btn mui-btn-red" id = "delete-btn" data-id = "<%=result[i].id%>">删除</span>
+                    </div>
+                    <div class="mui-slider-handle" >
+                        邮编:
+                        <%=result[i].postCode%>
+                            用户名:
+                            <%=result[i].recipients%>
+                    <p><%=result[i].address%>&nbsp<%=result[i].addressDetail%></p>
+                    </div>
+                </li>
+            <% } %>
+
+    </script>
 
 </body>
 

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/base.css">
     <script src="./assets/zepto/zepto.min.js"></script>
     <script src="./assets/mui/js/mui.min.js"></script>
+    <script src="./assets//artTemplate/template-native.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/user.js"></script>
 </head>
@@ -39,34 +40,40 @@
         </a>
     </nav>
     <div class="mui-content register_content">
-            <ul class="mui-table-view" style = "margin-top:0">
-                    <li class="mui-table-view-cell mui-media">
-                        <a href="javascript:;">
-                            <img class="mui-media-object mui-pull-left" src="./images/user.jpg">
-                            <div class="mui-media-body" >
-                                <span id = "userPhone"></span>
-                                <p class="mui-ellipsis" id = "userAccount">账号:</p>
-                            </div>
-                        </a>
-                    </li>
+            <ul class="mui-table-view" style = "margin-top:0" id = "userInf">
+                   
                    
                 </ul>
         <ul class="mui-table-view">
             <li class="mui-table-view-cell">
-                <a class="mui-navigate-right">修改密码</a>
+                <a  href = "modify.html" class="mui-navigate-right">修改密码</a>
             </li>
             <li class="mui-table-view-cell">
-                <a class="mui-navigate-right">我的购物车</a>
+                <a  href = "cart.html" class="mui-navigate-right">我的购物车</a>
             </li>
             <li class="mui-table-view-cell">
-                <a class="mui-navigate-right">收货地址管理</a>
+                <a  href = "address.html" class="mui-navigate-right">收货地址管理</a>
             </li>
             <li class="mui-table-view-cell">
                 <a class=" mui-text-center" id = "logout">退出登录</a>
             </li>
         </ul>
     </div>
+<!-- 使用模板引擎渲染用户信息 -->
+<script type = "text/template" id = "userPlt">
 
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="./images/user.jpg">
+            <div class="mui-media-body" >
+                <%=mobile%>
+                <p class="mui-ellipsis" id = "userAccount">账号:<%=username%></p>
+            </div>
+        </a>
+    </li>
+
+
+</script>
 
 </body>
 
