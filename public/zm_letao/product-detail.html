@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable = no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘移动项目搜索中心</title>
+    <link rel="stylesheet" href="./assets/mui/css/iconfont.css">
+    <link rel="stylesheet" href="./assets/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/product-detail.css">
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="./assets/mui/js/mui.min.js"></script>
+    <script src="./assets/artTemplate/template-native.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/product-detail.js"></script>
+
+</head>
+
+<body>
+    <header class="mui-bar mui-bar-nav header">
+        <h1 class="mui-title">商品详情页</h1>
+    </header>
+    <nav class="mui-bar mui-bar-tab footer">
+        <a class="mui-tab-item " href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a>
+        <a class="mui-tab-item" href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a>
+        <a class="mui-tab-item" href="cart.html">
+            <span class="mui-icon iconfont icon-gouwuche"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a>
+        <a class="mui-tab-item" href="user.html">
+            <span class="mui-icon mui-icon-person"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+    ;
+    <div class="mui-content product-detail">
+        <!-- 轮播图部分 -->
+        <div class="pr-content">
+
+        </div>
+
+    </div>
+    <!-- 利用模板来渲染搜索到的数据 -->
+
+
+</body>
+
+</html>
+<script type="text/template" id="detailTpl">
+    <div class="mui-slider">
+        <div class="mui-slider-group">
+            <div class="mui-slider-item">
+                <img src="images/detail.jpg" />
+            </div>
+            <div class="mui-slider-item">
+                <img src="images/detail.jpg" />
+            </div>
+            <div class="mui-slider-item">
+                <img src="images/detail.jpg" />
+            </div>
+            <div class="mui-slider-item">
+                <img src="images/detail.jpg" />
+            </div>
+        </div>
+    </div>
+    <p>匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</p>
+    <div class="price mui-clearfix">
+        <div class="mui-pull-left">
+            价格:
+            <span class="newPrice">¥112</span>
+        </div>
+        <div class="mui-pull-left">
+            <span class="oldPrice">¥342</span>
+
+        </div>
+    </div>
+    <div class="pr-size">
+        尺码:
+        <span>35</span>
+        
+
+    </div>
+    <!-- 添加商品信息 -->
+    <div class="addNum">
+        数量:
+        <div class="mui-numbox addNum" data-numbox-step="1" data-numbox-min="0" data-numbox-max="100">
+            <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+            <input class="mui-numbox-input" type="number" />
+            <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+        </div>
+        剩余:
+        <span></span>
+    </div>
+</script>

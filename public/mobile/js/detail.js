@@ -1,6 +1,6 @@
 $(function(){
 
-	var id = getParamsByUrl(location.href,'id');
+	var id = getParamsByUrl(location.href,'id')||1;
 	var size = -1;
 	var num = 1;
 	var rest = 0;

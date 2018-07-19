@@ -51,7 +51,7 @@
 
                 </div>
                 <ul class="mui-clearfix" id="search_result">
-
+                    
 
                 </ul>
             </div>
@@ -63,7 +63,7 @@
     <script type="text/template" id="searchResult">
         <%for(var i = 0; i < data.length; i++){%>
             <li>
-                <a href="javascript:;">
+                <a href="product-detail.html?id=<%=data[i].id%>">
                     <img src="<%=data[i].pic[0].picAddr%>">
                     <p>
                         <%=data[i].proName%>

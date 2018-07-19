@@ -72,7 +72,7 @@ Category.updateTopCategory = function (category, callback) {
 };
 
 Category.queryTopCategoryPaging = function (page,callback) {
-    var selectSql = 'select * from category order by id asc';
+    var selectSql = 'select * from category order by id desc';
 	  selectSql  += " LIMIT ?,?";
     db.query(selectSql,[(page.page - 1) * page.size,page.size], function (err, result) {
         if (err) {
