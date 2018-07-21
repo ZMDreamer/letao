@@ -57,46 +57,53 @@
 <script type="text/template" id="detailTpl">
     <div class="mui-slider">
         <div class="mui-slider-group">
-            <div class="mui-slider-item">
-                <img src="images/detail.jpg" />
-            </div>
-            <div class="mui-slider-item">
-                <img src="images/detail.jpg" />
-            </div>
-            <div class="mui-slider-item">
-                <img src="images/detail.jpg" />
-            </div>
-            <div class="mui-slider-item">
-                <img src="images/detail.jpg" />
-            </div>
+            <%for(var i = 0; i < pic.length; i++){ %>
+
+                <div class="mui-slider-item">
+                    <img src="<%=pic[i].picName%>" />
+                </div>
+
+                <% } %>
+
+
         </div>
     </div>
-    <p>匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</p>
+    <p>
+        <%=proName%>
+    </p>
     <div class="price mui-clearfix">
         <div class="mui-pull-left">
             价格:
-            <span class="newPrice">¥112</span>
+            <span class="newPrice">¥1
+                <%=price%>
+            </span>
         </div>
         <div class="mui-pull-left">
-            <span class="oldPrice">¥342</span>
+            <span class="oldPrice">¥
+                <%=oldPrice%>
+            </span>
 
         </div>
     </div>
     <div class="pr-size">
         尺码:
-        <span>35</span>
-        
-
+        <% var size = size.split('-')%>
+            <% for(var i=size[0];i<=size[1];i++){ %>
+                <span>
+                    <%=i%>
+                </span>
+                <% } %>
     </div>
     <!-- 添加商品信息 -->
     <div class="addNum">
         数量:
-        <div class="mui-numbox addNum" data-numbox-step="1" data-numbox-min="0" data-numbox-max="100">
+        <div class="mui-numbox" data-numbox-step="1" data-numbox-min="1" data-numbox-max="<%=num%>" id = "addNum">
             <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
-            <input class="mui-numbox-input" type="number" />
+            <input class="mui-numbox-input" type="number" name="number">
             <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
         </div>
         剩余:
-        <span></span>
+        <%=num%>
+            <span></span>
     </div>
 </script>
