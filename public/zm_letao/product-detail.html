@@ -46,14 +46,19 @@
         <div class="pr-content">
 
         </div>
-
+        <!-- 进入购物车部分-->
+        <div class="entryCart mui-clearfix">
+            <span type="button" class="mui-btn mui-btn-warning">进入购物车</span>
+            <span type="button" class="mui-btn mui-btn-danger" id = "addCart"> 加入购物车</span>
+        </div>
     </div>
-    <!-- 利用模板来渲染搜索到的数据 -->
 
 
 </body>
 
 </html>
+    <!-- 利用模板来渲染搜索到的数据 -->
+
 <script type="text/template" id="detailTpl">
     <div class="mui-slider">
         <div class="mui-slider-group">
@@ -74,7 +79,7 @@
     <div class="price mui-clearfix">
         <div class="mui-pull-left">
             价格:
-            <span class="newPrice">¥1
+            <span class="newPrice">¥
                 <%=price%>
             </span>
         </div>

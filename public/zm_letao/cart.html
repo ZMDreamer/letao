@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable = no">
@@ -8,9 +9,12 @@
     <link rel="stylesheet" href="./assets/mui/css/iconfont.css">
     <link rel="stylesheet" href="./assets/mui/css/mui.min.css">
     <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/cart.css">
     <script src="./assets/zepto/zepto.min.js"></script>
     <script src="./assets/mui/js/mui.min.js"></script>
+    <script src="./assets/artTemplate/template-native.js"></script>
     <script src="./js/common.js"></script>
+    <script src="./js/cart.js"></script>
 </head>
 
 <body>
@@ -37,10 +41,44 @@
             <span class="mui-tab-label">会员中心</span>
         </a>
     </nav>
-    <div class="mui-content register_content">
-        
-    </div>
+    <div class="mui-content ">
+        <ul class="mui-table-view" id = "cartList">
+          
 
+        </ul>
+        <div class="totalPrice">
+                <p>订单总价: ￥2000</p>
+        </div>
+    </div>
+<!-- 购物车数据模板 -->
+<script type = "test/template" id = "cartTpl">
+<%for(var i = 0; i < data.length; i++) { %>
+    <li class="mui-table-view-cell mui-media">
+            <a href="javascript:;">
+                <img class="mui-media-object mui-pull-left" src="<%=data[i].pic[0].picAddr%>">
+                <div class="mui-media-body">
+                    <p class="mui-ellipsis"><%=data[i].proName%></p>
+                    <div class="mui-row ">
+                        <div class="mui-col-sm-6">
+                            <input type="checkbox">
+                            <span class="price-1">¥<%=data[i].price%></span>
+                            <span class="price-2 gray">¥<%=data[i].oldPrice%></span>
+                        </div>
+                        <div class="mui-col-sm-4">
+                            <span class="gray">鞋码：<%=data[i].size%></span>
+                        </div>
+                        <div class="mui-col-sm-2">
+                            <span class="gray"><%=data[i].size%>x<%=data[i].num%>双</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    <% } %>
+
+
+
+</script>
 
 </body>
 

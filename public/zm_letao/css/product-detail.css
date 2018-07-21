@@ -41,3 +41,19 @@
 .addNum > div {
   margin: 0 5px;
 }
+.entryCart {
+  box-sizing: border-box;
+  padding: 10px;
+}
+.entryCart > span {
+  box-sizing: border-box;
+  width: 50%;
+  border: none;
+  border-radius: 0;
+}
+.entryCart > span:first-of-type {
+  float: left;
+}
+.entryCart > span:last-of-type {
+  float: right;
+}

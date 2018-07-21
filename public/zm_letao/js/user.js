@@ -48,10 +48,4 @@ var user_html = template('userPlt',data);
 $('#userInf').html(user_html);
 
 
-
-
-
-
-
-
 })
